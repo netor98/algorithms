@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';  
+}
+
+body {
+    font-size: 20px;
+    background-color: #202c3c;
+}
+
+button {
+    font-weight: 800;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    color: #e8f1fd;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    background-color: #7bacec;
+    width: 15em;
+}
+
+button:hover {
+    background-color: rgb(0, 136, 169);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-weight: 800;
+}
+
+.header a {
+    padding: 10px;
+    text-decoration: none;
+}
+
+
+
+.nav__links {
+    margin: 0;
+    list-style: none;
+}
+
+.nav__links li {
+    padding: 10px 5px;
+    display: inline-block;
+}
+
+.nav__links, li, a{
+    color: #e8f1fd;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover{
+    color: rgb(0, 136, 169);
+}
+
+.dropdown {
+    min-width: 9em;
+    position: relative;
+}
+
+.select {
+    color: #e8f1fd;
+    background-color: #2a2f3b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px #2a2f3b solid;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 1rem;
+}
+
+
+/* styles added later in js*/
+.select-clicked {
+    border: 2px #26489a solid;
+    box-shadow: 0 0 0.8em #26489a;
+}
+
+.select:hover {
+    background: #323741;
+}
+
+.caret {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: 0.3s;
+}
+
+.menu {
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background-color: #323741;
+    border: 1px #363a43 solid;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    color: #9fa5b5;
+    position: absolute;
+    top: 3em;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.3s;
+    z-index: 1;
+}
+
+.menu li {
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background-color: #2a2d35;
+}
+
+.active {
+    background-color: #23242a;
+}
+
+
+.menu-open {
+    display: block;
+    opacity: 1;
+}
+
+
+#title {
+    margin-top: 1em;
+    color: #e8f1fd;
+    text-align: center;
+}
+
