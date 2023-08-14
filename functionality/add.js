@@ -1,4 +1,5 @@
 const d  = document;
+let Xasis = 0;
 const addElement = (btnAdd, input, divMain) => {
     
     const $input = d.getElementById(input);
@@ -18,7 +19,9 @@ function createElement(size, div) {
     newBox.textContent = size;
     newBox.classList.toggle('font-family');
     newBox.classList.toggle('box');
+    newBox.style.transform = `translate(${Xasis})`
     div.appendChild(newBox);
+    Xasis += 5;
 }
 
 export default addElement;
