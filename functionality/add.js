@@ -1,5 +1,6 @@
 const d  = document;
-let Xasis = 0;
+let Xaxis = 0;
+let Yaxis = 0
 const addElement = (btnAdd, input, divMain) => {
     
     const $input = d.getElementById(input);
@@ -15,13 +16,15 @@ const addElement = (btnAdd, input, divMain) => {
 
 
 function createElement(size, div) {
+    if (div.childElementCount <= 0) Xaxis = 0;
     const newBox = document.createElement('div');
     newBox.textContent = size;
-    newBox.classList.toggle('font-family');
-    newBox.classList.toggle('box');
-    newBox.style.transform = `translate(${Xasis})`
+    newBox.classList.add('font-family');
+    newBox.classList.add('box');
+    if (Xaxis > 100) Xaxis = 0;
+    newBox.style.transform = `translate(${Xaxis}px, 0px)`
     div.appendChild(newBox);
-    Xasis += 5;
+    Xaxis += 10;
 }
 
 export default addElement;

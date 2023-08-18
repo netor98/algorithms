@@ -5,8 +5,12 @@
 }
 
 body {
-    font-size: 17px;
+    font-size: 16px;
     background-color: #202c3c;
+}
+html,body{
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 button {
@@ -18,7 +22,7 @@ button {
     cursor: pointer;
     transition: all 0.3s ease 0s;
     background-color: #7bacec;
-    width: 15em;
+    width: 15em;;
 }
 
 button:hover {
@@ -152,24 +156,24 @@ button:hover {
 #visualizer {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin: 9rem auto;
+    width: 660px;
 }
 
 .box {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 3.5rem;
     height: 3.5rem;
-    background-color: rgb(101, 255, 101);
-    margin: 5px 10px;
+    background-color: #8965ff;
     text-align: center;
-    transform: translate(0px);
-    transition: all 5s ease;
+    transition: all .5s;
+    border-radius: 50%;
 }
+
 
 .font-family {
     font-size: 1.5rem;
@@ -178,13 +182,14 @@ button:hover {
 
 
 #inputs {
-    margin-top: 5rem;
+    margin: 5rem auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 1rem;
 }
+
 
 #amount-number {
     background-color: #323741;
